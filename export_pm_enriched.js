@@ -16,7 +16,8 @@ if (!group) {
 
 console.log('Found group:', group.list_name);
 const leads = JSON.parse(group.leads);
-const leadIds = leads.map(l => l.id);
+// Support both flat ID array and old {id, businessName, ...} format
+const leadIds = Array.isArray(leads) ? (typeof leads[0] === 'number' ? leads : leads.map(l => l.id)) : [];
 if (!leadIds.length) {
   console.error('No leads in group');
   process.exit(1);
