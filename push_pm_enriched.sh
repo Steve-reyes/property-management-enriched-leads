@@ -1,7 +1,6 @@
 #!/bin/bash
 # Export property management enriched leads and push to GitHub repo
 # Usage: ./push_pm_enriched.sh <list_name> <vps_number>
-#   list_name: part of the enriched group name (e.g. "Nanaimo Vancouver")
 #   vps_number: 1 = VPS1 (local), 3 = VPS3 (87.106.124.206)
 
 CITY=$1
@@ -37,6 +36,8 @@ cp "$CSV_FILE" "$REPO_DIR/"
 cd "$REPO_DIR"
 git add -A
 LEAD_COUNT=$(tail -n +2 "$(basename "$CSV_FILE")" 2>/dev/null | wc -l)
+git config user.name "Scorpio Bot"
+git config user.email "scorpio@leadgen.com"
 git commit -m "enriched leads $DATE - $CITY ($LEAD_COUNT)"
 git push origin main 2>&1 | tail -2
 echo "Pushed: $(basename "$CSV_FILE") ($LEAD_COUNT leads)"
