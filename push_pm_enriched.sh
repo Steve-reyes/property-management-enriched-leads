@@ -26,7 +26,7 @@ elif [ "$VPS" = "3" ]; then
 fi
 
 # Copy to repo and push
-CSV_FILE=$(ls /tmp/*"$DATE"*property-management.csv 2>/dev/null | tail -1)
+CSV_FILE=$(ls -t /tmp/*"$DATE"*property-management.csv 2>/dev/null | head -1)
 if [ -z "$CSV_FILE" ]; then
   echo "No CSV found"
   exit 1
