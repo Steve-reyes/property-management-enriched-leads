@@ -17,11 +17,11 @@ fi
 if [ "$VPS" = "1" ]; then
   b64=$(base64 < /root/property-management-enriched-leads/export_pm_enriched.js | tr -d '\n')
   echo "$b64" | base64 -d | docker exec -i -w /app lead-scraper-backend sh -c 'cat > /app/export_pm_enriched.js && node /app/export_pm_enriched.js "'"$CITY"'"'
-  docker cp lead-scraper-backend:/tmp/$(docker exec lead-scraper-backend ls /tmp/ | grep "$DATE.*property-management.csv" | tail -1) /tmp/ 2>/dev/null
+  docker cp lead-scraper-backend:/tmp/$(docker exec lead-scraper-backend ls -t /tmp/ | grep "$DATE.*property-management.csv" | head -1) /tmp/ 2>/dev/null
 elif [ "$VPS" = "3" ]; then
   b64=$(base64 < /root/property-management-enriched-leads/export_pm_enriched.js | tr -d '\n')
   echo "$b64" | base64 -d | sshpass -p 'LL89eVQkZDWsClRz6xbow4N' ssh -o StrictHostKeyChecking=no root@87.106.124.206 "base64 -d | docker exec -i -w /app lead-scraper-v3-backend sh -c 'cat > /app/export_pm_enriched.js && node /app/export_pm_enriched.js \"$CITY\"'"
-  FILENAME=$(sshpass -p 'LL89eVQkZDWsClRz6xbow4N' ssh -o StrictHostKeyChecking=no root@87.106.124.206 "docker exec lead-scraper-v3-backend ls /tmp/ | grep '$DATE.*property-management.csv' | tail -1")
+  FILENAME=$(sshpass -p 'LL89eVQkZDWsClRz6xbow4N' ssh -o StrictHostKeyChecking=no root@87.106.124.206 "docker exec lead-scraper-v3-backend ls -t /tmp/ | grep '$DATE.*property-management.csv' | head -1")
   sshpass -p 'LL89eVQkZDWsClRz6xbow4N' ssh -o StrictHostKeyChecking=no root@87.106.124.206 "cat /tmp/$FILENAME" > "/tmp/$FILENAME"
 fi
 
