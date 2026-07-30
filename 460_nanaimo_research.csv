@@ -1,0 +1,15 @@
+business_name,email,phone,website,address,city,rating,category,proximity_notes,comments
+460 Property Management,info@460pm.com,250.591.4603,,460 Nanaimo St,Vancouver,3.9,Property management company,TARGET,"PRIMARY PM — registered at 460 Nanaimo St. Real email (info@460pm.com) and valid BC phone. This is the property manager for this address."
+460 Commercial Ltd.,,8082810,,460 Nanaimo St,Vancouver,4.3,Property management company,TARGET,"AT SAME ADDRESS — property management company. No email found."
+460 REALTY,info@460realty.com,250-591-4601,,460 Nanaimo St,Vancouver,4.7,Real estate agency,TARGET,"AT SAME ADDRESS — real estate agency. Real email and phone. Could know the building owner/PM."
+Vada Property Management,info@vadapm.com,012345678910,https://vadapm.com/,4190 Lougheed Hwy #425,Vancouver,,Property management,NEARBY,Has website and email but phone is garbled.
+Bel-Air Realty Group,info@belairrealty.ca,,,2621 E Hastings St,Vancouver,,Real Estate,NEARBY,Real estate brokerage. Email found.
+Rancho Management Services,pmgr@ranchogroup.com,(604) 684-4508,http://www.ranchovan.com/,1125 Howe St 8th Floor,Vancouver,,Property management,NEARBY,Established PM company with real contact info.
+HostGenius Vancouver,support@hostgenius.ca,+1 (604) 398-5232,https://www.hostgenius.ca/,318 Homer St Unit 501,Vancouver,,Property management,NEARBY,Short-term rental management company.
+FirstService Residential,,(855) 683-8900,https://www.fsresidential.com/bc/vancouver/,200 Granville St #700,Vancouver,,Property management,NEARBY,Major national PM company with Vancouver office.
+Martello Property Services,,604.681.6544,http://www.martello.group/,808 W Hastings St Suite 920,Vancouver,,Property management,NEARBY,Phone only.
+Hollyburn Properties Limited,,(999) 999-9999,,1155 W Pender St #203,Vancouver,,Property management,NEARBY,Phone is placeholder.
+Bodewell,info@bodewell.ca,(604) 633-5511,http://bodewell.ca/,,Vancouver,,Property management,NEARBY,Real contact info.
+Korecki Real Estate Services,info@korecki.ca,(604) 233-7772,,,Vancouver,,Real Estate,NEARBY,Real estate services with contact info.
+Vancouver Rent It,peter@vancouverrentit.com,(604) 388-7368,http://www.vancouverrentit.com/,,Vancouver,,Rental,NEARBY,Rental agency.
+Ron Parpara PREC,ron@thevpgroup.ca,(604) 719-4069,,,Vancouver,,Real Estate,NEARBY,Real estate agent.
